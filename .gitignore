@@ -1,0 +1,56 @@
+# ============ 凭证与隐私（务必不要提交）============
+crawler/cookie.txt
+crawler/cookies/
+backend/.env
+.env
+.env.local
+
+# ============ 大数据文件与依赖（体积过大，不纳入版本控制）============
+venv/
+.venv/
+env/
+node_modules/
+jars/
+models/
+data/
+crawler/data/
+
+# 保留小样本数据用于快速体验
+!sample_data/
+
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ============ 日志 ============
+# 注意：这里忽略 logs 目录内的文件而不是整个目录，
+# 否则后续的 ! 例外规则无法把 done_bvids.txt 重新纳入（gitignore 不会进入被排除的目录）。
+*.log
+crawler/logs/*
+!crawler/logs/done_bvids.txt
+# 旧版日志备份，属冗余内容，不纳入版本控制
+crawler/logs_old/
+
+# ============ 前端 ============
+.vite/
+frontend/dist/
+frontend/node_modules/
+frontend/.env.local
+
+# ============ 编辑器 / 系统 ============
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
